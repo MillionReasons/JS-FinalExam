@@ -60,7 +60,7 @@ var actorChars = {
 
 function Player(pos) {
   this.pos = pos.plus(new Vector(0, -0.5));
-  this.size = new Vector(1, 1);
+  this.size = new Vector(1.0, 1.5);
   this.speed = new Vector(0, 0);
 }
 Player.prototype.type = "player";
@@ -81,7 +81,7 @@ Lava.prototype.type = "lava";
 
 function Coin(pos) {
   this.basePos = this.pos = pos.plus(new Vector(0.2, 0.1));
-  this.size = new Vector(0.6, 0.6);
+  this.size = new Vector(0.9, 0.9);
   this.wobble = Math.random() * Math.PI * 2;
 }
 Coin.prototype.type = "coin";
@@ -361,60 +361,148 @@ function runGame(plans, Display) {
           life = life - 1;
 
 
-          var tt = sessionStorage.length -1;
-          var name1 = sessionStorage.key(tt);
-          var coinsum=document.getElementById("coinNum").innerHTML;
-          localStorage.setItem(name1,coinsum);
-          var max = localStorage.getItem(localStorage.key(0));
-          for(var i=1, len = localStorage.length; i<len ; i++){
-                if(max<localStorage.getItem(localStorage.key(i))){
+          var session = sessionStorage.length -1;
+          var sessionID = sessionStorage.key(session);
+          var score=document.getElementById("coinNum").innerHTML;
+          localStorage.setItem(sessionID,score);
+
+
+          var top1 = localStorage.getItem(localStorage.key(0));
+          for(var i=1, daxiao = localStorage.length; i<daxiao ; i++){
+                if(top1<localStorage.getItem(localStorage.key(i))){
                   var first = i;
-                  max = localStorage.getItem(localStorage.key(i));
+                  top1 = localStorage.getItem(localStorage.key(i));
                 }
           }
-          var max1 = localStorage.getItem(localStorage.key(0));
-          for(var i=1, len = localStorage.length; i<len ; i++){
+          var top2 = localStorage.getItem(localStorage.key(0));
+          for(var i=1, daxiao = localStorage.length; i<daxiao ; i++){
                 
-                if(max1<localStorage.getItem(localStorage.key(i))){
+                if(top2<localStorage.getItem(localStorage.key(i))){
                   if(i!=first){
                   var second = i;
-                  max1 = localStorage.getItem(localStorage.key(i));
+                  top2 = localStorage.getItem(localStorage.key(i));
                   }
                 }
           }
-          var max2 = localStorage.getItem(localStorage.key(0));
-           for(var i=1, len = localStorage.length; i<len ; i++){
+          var top3 = localStorage.getItem(localStorage.key(0));
+           for(var i=1, daxiao = localStorage.length; i<daxiao ; i++){
                
-                if(max2<localStorage.getItem(localStorage.key(i))){
+                if(top3<localStorage.getItem(localStorage.key(i))){
                   if(i!=first&&i!=second){
                   var third = i;
-                  max2 = localStorage.getItem(localStorage.key(i));
+                  top3 = localStorage.getItem(localStorage.key(i));
                   }
                 }
           }
 
-          var max3 = localStorage.getItem(localStorage.key(0));
-           for(var i=1, len = localStorage.length; i<len ; i++){
+          var top4 = localStorage.getItem(localStorage.key(0));
+           for(var i=1, daxiao = localStorage.length; i<daxiao ; i++){
                
-                if(max3<localStorage.getItem(localStorage.key(i))){
+                if(top4<localStorage.getItem(localStorage.key(i))){
                   if(i!=first&&i!=second&&i!=third){
-                  var fourth = i;
-                  max2 = localStorage.getItem(localStorage.key(i));
+                  var forth = i;
+                  top4 = localStorage.getItem(localStorage.key(i));
                   }
                 }
           }
+
+          var top5 = localStorage.getItem(localStorage.key(0));
+           for(var i=1, daxiao = localStorage.length; i<daxiao ; i++){
+               
+                if(top5<localStorage.getItem(localStorage.key(i))){
+                  if(i!=first&&i!=second&&i!=third&&i!=forth){
+                  var fifth = i;
+                  top5 = localStorage.getItem(localStorage.key(i));
+                  }
+                }
+          }
+
+           var top6 = localStorage.getItem(localStorage.key(0));
+           for(var i=1, daxiao = localStorage.length; i<daxiao ; i++){
+               
+                if(top6<localStorage.getItem(localStorage.key(i))){
+                  if(i!=first&&i!=second&&i!=third&&i!=forth&&i!=fifth){
+                  var sixth = i;
+                  top6 = localStorage.getItem(localStorage.key(i));
+                  }
+                }
+          }
+
+          var top7 = localStorage.getItem(localStorage.key(0));
+           for(var i=1, daxiao = localStorage.length; i<daxiao ; i++){
+               
+                if(top7<localStorage.getItem(localStorage.key(i))){
+                  if(i!=first&&i!=second&&i!=third&&i!=forth&&i!=fifth&&i!=sixth){
+                  var seventh = i;
+                  top7 = localStorage.getItem(localStorage.key(i));
+                  }
+                }
+          }
+
+          var top8 = localStorage.getItem(localStorage.key(0));
+           for(var i=1, daxiao = localStorage.length; i<daxiao ; i++){
+               
+                if(top8<localStorage.getItem(localStorage.key(i))){
+                  if(i!=first&&i!=second&&i!=third&&i!=forth&&i!=fifth&&i!=sixth&&i!=seventh){
+                  var eighth = i;
+                  top8 = localStorage.getItem(localStorage.key(i));
+                  }
+                }
+          }
+
+          var top9 = localStorage.getItem(localStorage.key(0));
+           for(var i=1, daxiao = localStorage.length; i<daxiao ; i++){
+               
+                if(top9<localStorage.getItem(localStorage.key(i))){
+                  if(i!=first&&i!=second&&i!=third&&i!=forth&&i!=fifth&&i!=sixth&&i!=seventh&&i!=eighth){
+                  var nineth = i;
+                  top9 = localStorage.getItem(localStorage.key(i));
+                  }
+                }
+          }
+
+          var top10 = localStorage.getItem(localStorage.key(0));
+           for(var i=1, daxiao = localStorage.length; i<daxiao ; i++){
+               
+                if(top10<localStorage.getItem(localStorage.key(i))){
+                  if(i!=first&&i!=second&&i!=third&&i!=forth&&i!=fifth&&i!=sixth&&i!=seventh&&i!=eighth&&i!=nineth){
+                  var tenth = i;
+                  top10 = localStorage.getItem(localStorage.key(i));
+                  }
+                }
+          }
+
           
-           document.getElementById("td3").innerHTML=localStorage.key(first);
-           document.getElementById("td4").innerHTML=localStorage.getItem(localStorage.key(first));
+          
+           document.getElementById("top1id").innerHTML=localStorage.key(first);
+           document.getElementById("top1sc").innerHTML=localStorage.getItem(localStorage.key(first));
 
-           document.getElementById("td5").innerHTML=localStorage.key(second);
-           document.getElementById("td6").innerHTML=localStorage.getItem(localStorage.key(second));
+           document.getElementById("top2id").innerHTML=localStorage.key(second);
+           document.getElementById("top2sc").innerHTML=localStorage.getItem(localStorage.key(second));
 
-           document.getElementById("td7").innerHTML=localStorage.key(third);
-           document.getElementById("td8").innerHTML=localStorage.getItem(localStorage.key(third));
+           document.getElementById("top3id").innerHTML=localStorage.key(third);
+           document.getElementById("top3sc").innerHTML=localStorage.getItem(localStorage.key(third));
 
-           document.getElementById("td9").innerHTML=localStorage.key(fourth);
-           document.getElementById("td10").innerHTML=localStorage.getItem(localStorage.key(fourth));
+           document.getElementById("top4id").innerHTML=localStorage.key(forth);
+           document.getElementById("top4sc").innerHTML=localStorage.getItem(localStorage.key(forth));
+
+           document.getElementById("top5id").innerHTML=localStorage.key(fifth);
+           document.getElementById("top5sc").innerHTML=localStorage.getItem(localStorage.key(fifth));
+           
+           document.getElementById("top6id").innerHTML=localStorage.key(sixth);
+           document.getElementById("top6sc").innerHTML=localStorage.getItem(localStorage.key(sixth));
+           
+           document.getElementById("top7id").innerHTML=localStorage.key(seventh);
+           document.getElementById("top7sc").innerHTML=localStorage.getItem(localStorage.key(seventh));
+           
+           document.getElementById("top8id").innerHTML=localStorage.key(eighth);
+           document.getElementById("top8sc").innerHTML=localStorage.getItem(localStorage.key(eighth));
+
+           document.getElementById("top9id").innerHTML=localStorage.key(nineth);
+           document.getElementById("top9sc").innerHTML=localStorage.getItem(localStorage.key(nineth));
+
+           document.getElementById("top10id").innerHTML=localStorage.key(tenth);
+           document.getElementById("top10sc").innerHTML=localStorage.getItem(localStorage.key(tenth));
 
 
           alert("您当前剩余" + life + "次机会！");

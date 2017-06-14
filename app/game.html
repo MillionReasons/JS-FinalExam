@@ -1,0 +1,285 @@
+<!doctype html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="D:\GITHUB\JS-FinalExam\app\code\chapter\15_game.js"></script>
+<script src="D:\GITHUB\JS-FinalExam\app\code\GAME_LEVELS.js"></script>
+
+<link rel="stylesheet" href="css/game.css">
+
+<style type="text/css"> 
+      
+     body{background:url(image/beijing.jpg)no-repeat;background-size:cover;  } 
+ </style>
+
+
+<div id="music">   <!-- 设置网页背景音乐  自带播放器 -->
+ <audio controls  loop>
+  <source src="澤野弘之 - Barricades.mp3" type="audio/ogg" /> </audio>
+  </div>
+
+<body>
+  
+  <div id="111">
+    <script>
+    runGame(GAME_LEVELS, DOMDisplay);
+  </script>
+  </div>
+
+  
+  
+
+<script>
+  
+
+    function paiming(){
+      
+      var sessionID = sessionStorage.length -1;
+
+      var keySession = sessionStorage.key(sessionID);
+
+      var tr = document.createElement("tr");
+
+      var paiming1 = document.createElement("td");
+
+      var paiming2 = document.createElement("td");
+
+
+      paiming2.id='coinNum';
+      tr.align = "center";
+
+      paiming1.innerHTML = keySession;
+      paiming2.innerHTML = 0;
+
+      tr.appendChild(paiming1);
+      tr.appendChild(paiming2);    
+
+      document.getElementById("table1").appendChild(tr);
+
+      var top1 = localStorage.getItem(localStorage.key(0));
+          for(var i=1, daxiao = localStorage.length; i<daxiao ; i++){
+                if(top1<localStorage.getItem(localStorage.key(i))){
+                  var first = i;
+                  top1 = localStorage.getItem(localStorage.key(i));
+                }
+          }
+          var top2 = localStorage.getItem(localStorage.key(0));
+          for(var i=1, daxiao = localStorage.length; i<daxiao ; i++){
+                
+                if(top2<localStorage.getItem(localStorage.key(i))){
+                  if(i!=first){
+                  var second = i;
+                  top2 = localStorage.getItem(localStorage.key(i));
+                  }
+                }
+          }
+          var top3 = localStorage.getItem(localStorage.key(0));
+           for(var i=1, daxiao = localStorage.length; i<daxiao ; i++){
+               
+                if(top3<localStorage.getItem(localStorage.key(i))){
+                  if(i!=first&&i!=second){
+                  var third = i;
+                  top3 = localStorage.getItem(localStorage.key(i));
+                  }
+                }
+          }
+
+          var top4 = localStorage.getItem(localStorage.key(0));
+           for(var i=1, daxiao = localStorage.length; i<daxiao ; i++){
+               
+                if(top4<localStorage.getItem(localStorage.key(i))){
+                  if(i!=first&&i!=second&&i!=third){
+                  var forth = i;
+                  top4 = localStorage.getItem(localStorage.key(i));
+                  }
+                }
+          }
+
+          var top5 = localStorage.getItem(localStorage.key(0));
+           for(var i=1, daxiao = localStorage.length; i<daxiao ; i++){
+               
+                if(top5<localStorage.getItem(localStorage.key(i))){
+                  if(i!=first&&i!=second&&i!=third&&i!=forth){
+                  var fifth = i;
+                  top5 = localStorage.getItem(localStorage.key(i));
+                  }
+                }
+          }
+
+           var top6 = localStorage.getItem(localStorage.key(0));
+           for(var i=1, daxiao = localStorage.length; i<daxiao ; i++){
+               
+                if(top6<localStorage.getItem(localStorage.key(i))){
+                  if(i!=first&&i!=second&&i!=third&&i!=forth&&i!=fifth){
+                  var sixth = i;
+                  top6 = localStorage.getItem(localStorage.key(i));
+                  }
+                }
+          }
+
+          var top7 = localStorage.getItem(localStorage.key(0));
+           for(var i=1, daxiao = localStorage.length; i<daxiao ; i++){
+               
+                if(top7<localStorage.getItem(localStorage.key(i))){
+                  if(i!=first&&i!=second&&i!=third&&i!=forth&&i!=fifth&&i!=sixth){
+                  var seventh = i;
+                  top7 = localStorage.getItem(localStorage.key(i));
+                  }
+                }
+          }
+
+          var top8 = localStorage.getItem(localStorage.key(0));
+           for(var i=1, daxiao = localStorage.length; i<daxiao ; i++){
+               
+                if(top8<localStorage.getItem(localStorage.key(i))){
+                  if(i!=first&&i!=second&&i!=third&&i!=forth&&i!=fifth&&i!=sixth&&i!=seventh){
+                  var eighth = i;
+                  top8 = localStorage.getItem(localStorage.key(i));
+                  }
+                }
+          }
+
+          var top9 = localStorage.getItem(localStorage.key(0));
+           for(var i=1, daxiao = localStorage.length; i<daxiao ; i++){
+               
+                if(top9<localStorage.getItem(localStorage.key(i))){
+                  if(i!=first&&i!=second&&i!=third&&i!=forth&&i!=fifth&&i!=sixth&&i!=seventh&&i!=eighth){
+                  var nineth = i;
+                  top9 = localStorage.getItem(localStorage.key(i));
+                  }
+                }
+          }
+
+          var top10 = localStorage.getItem(localStorage.key(0));
+           for(var i=1, daxiao = localStorage.length; i<daxiao ; i++){
+               
+                if(top10<localStorage.getItem(localStorage.key(i))){
+                  if(i!=first&&i!=second&&i!=third&&i!=forth&&i!=fifth&&i!=sixth&&i!=seventh&&i!=eighth&&i!=nineth){
+                  var tenth = i;
+                  top10 = localStorage.getItem(localStorage.key(i));
+                  }
+                }
+          }
+
+          
+          
+           document.getElementById("top1id").innerHTML=localStorage.key(first);
+           document.getElementById("top1sc").innerHTML=localStorage.getItem(localStorage.key(first));
+
+           document.getElementById("top2id").innerHTML=localStorage.key(second);
+           document.getElementById("top2sc").innerHTML=localStorage.getItem(localStorage.key(second));
+
+           document.getElementById("top3id").innerHTML=localStorage.key(third);
+           document.getElementById("top3sc").innerHTML=localStorage.getItem(localStorage.key(third));
+
+           document.getElementById("top4id").innerHTML=localStorage.key(forth);
+           document.getElementById("top4sc").innerHTML=localStorage.getItem(localStorage.key(forth));
+
+           document.getElementById("top5id").innerHTML=localStorage.key(fifth);
+           document.getElementById("top5sc").innerHTML=localStorage.getItem(localStorage.key(fifth));
+           
+           document.getElementById("top6id").innerHTML=localStorage.key(sixth);
+           document.getElementById("top6sc").innerHTML=localStorage.getItem(localStorage.key(sixth));
+           
+           document.getElementById("top7id").innerHTML=localStorage.key(seventh);
+           document.getElementById("top7sc").innerHTML=localStorage.getItem(localStorage.key(seventh));
+           
+           document.getElementById("top8id").innerHTML=localStorage.key(eighth);
+           document.getElementById("top8sc").innerHTML=localStorage.getItem(localStorage.key(eighth));
+
+           document.getElementById("top9id").innerHTML=localStorage.key(nineth);
+           document.getElementById("top9sc").innerHTML=localStorage.getItem(localStorage.key(nineth));
+
+           document.getElementById("top10id").innerHTML=localStorage.key(tenth);
+           document.getElementById("top10sc").innerHTML=localStorage.getItem(localStorage.key(tenth));
+
+
+
+
+
+    }
+    document.body.onload = function(){
+      paiming();
+    }
+
+</script>
+
+
+
+
+<div id="userinfo">
+<table border="0" width= 200px id="table1">
+  <tr>
+    <th  align=center>当前账号ID</th>
+    <th align=center>当前分数</th>
+  </tr>
+</table>
+</div>
+
+<div id="top10">
+<table  border="0" width= 300px id="table2">
+  <caption id="topbiaoti" align="top">TOP 10 Players</caption>
+  <tr>
+    <th align=center></th>
+    <th align=center>账号ID</th>
+    <th align=center>得分Score</th>
+  </tr>
+  <tr>
+    <th align=center id="diyi">第一</th>
+    <td id ="top1id" align=center></td>
+    <td id ="top1sc" align=center></td>
+  </tr>
+  <tr>
+    <th align=center id="dier">第二</th>
+    <td id ="top2id" align=center></td>
+    <td id ="top2sc" align=center></td>
+  </tr>
+  <tr>
+    <th align=center id="disan">第三</th>
+    <td id ="top3id" align=center></td>
+    <td id ="top3sc" align=center></td>
+  </tr>
+  <tr>
+    <th align=center id="disi">第四</th>
+    <td id ="top4id" align=center></td>
+    <td id ="top4sc" align=center></td>
+  </tr>
+
+  <tr>
+    <th align=center id="diwu">第五</th>
+    <td id ="top5id" align=center></td>
+    <td id ="top5sc" align=center></td>
+  </tr>
+
+  <tr>
+    <th align=center id="diliu">第六</th>
+    <td id ="top6id" align=center></td>
+    <td id ="top6sc" align=center></td>
+  </tr>
+
+  <tr>
+    <th align=center id="diqi">第七</th>
+    <td id ="top7id" align=center></td>
+    <td id ="top7sc" align=center></td>
+  </tr>
+
+  <tr>
+    <th align=center id="diba">第八</th>
+    <td id ="top8id" align=center></td>
+    <td id ="top8sc" align=center></td>
+  </tr>
+
+  <tr>
+    <th align=center id="dijiu">第九</th>
+    <td id ="top9id" align=center></td>
+    <td id ="top9sc" align=center></td>
+  </tr>
+
+  <tr>
+    <th align=center id="dishi">第十</th>
+    <td id ="top10id" align=center></td>
+    <td id ="top10sc" align=center></td>
+  </tr>
+</table>
+</div>
+
+
+</body>

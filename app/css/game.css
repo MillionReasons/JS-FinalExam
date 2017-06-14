@@ -12,6 +12,153 @@ background-size:cover;  }
 .player { background-image:url(maliao2.png);
 background-size:cover; }
 
+
+
+
+
+
+#h3{
+  position: relative;
+  left: 150px;
+  top:20px;
+  color: #ffffff;
+  
+}
+
+#yonghuming{
+
+  color: #ffffff;
+  position: relative;
+  left: 100px;
+  
+  top: 20px;
+}
+#inputyonghu{
+  
+  position: relative;
+  left: 160px;
+  
+  top: 0px;
+}
+
+#mima{
+  position: relative;
+  left: 100px;
+  
+  top: 20px;
+  
+  color: #ffffff;
+ 
+}
+#inputmima{
+  position: relative;
+  left: 160px;
+  
+  top: 0px;
+}
+
+#zhuceanniu{
+  
+  position: relative;
+  left: 180px;
+  
+  top: 50px;
+}
+
+#denluanniu{
+  position: relative;
+  left: 200px;
+  
+  top: 50px;
+}
+
+#topbiaoti{
+  font-weight: bold;
+  font-size: 26px;
+}
+
+#top1id{
+  font-weight: bold;
+  color:#FF0000;
+  font-size: 24px;
+}
+
+#top1sc{
+  font-weight: bold;
+  color:#FF0000;
+  font-size: 24px;
+}
+
+#top2id{
+  font-weight: bold;
+  color:#FF9900;
+  font-size: 22px;
+}
+
+#top2sc{
+  font-weight: bold;
+  color:#FF9900;
+  font-size: 22px;
+}
+
+#top3id{
+  font-weight: bold;
+  color:#0066FF;
+  font-size: 20px;
+}
+
+#top3sc{
+  font-weight: bold;
+  color:#0066FF;
+  font-size: 20px;
+}
+
+#diyi{
+  color:#FF0000;
+  
+  font-size: 24px;
+}
+
+#dier{
+  color:#FF9900;
+  font-size: 22px;
+  
+}
+
+#disan{
+  color:#0066FF;
+  font-size: 20px;
+  
+}
+
+#disi{
+  font-weight: normal;color: #ffffff;
+}
+
+#diwu{
+  font-weight: normal;color: #ffffff;
+}
+
+#diliu{
+  font-weight: normal;color: #ffffff;
+}
+
+#diqi{
+  font-weight: normal;color: #ffffff;
+}
+
+#diba{
+  font-weight: normal;color: #ffffff;
+}
+
+#dijiu{
+  font-weight: normal;color: #ffffff;
+}
+
+#dishi{
+  font-weight: normal;color: #ffffff;
+}
+
 #music{
   left: 700px;
   top: 150px;
@@ -19,15 +166,25 @@ background-size:cover; }
 }
 
 #userinfo{
-  position: absolute;
+  position: absolute;color: #ffffff;
   left: 470px;
   top: 150px;
+  background: rgba(255,255,255,0.2);width:200px;height:50px;
 }
 
 #top10{
   position: absolute;
   left: 1100px;
   top: 200px;
+  background: rgba(255,255,255,0.2);width:300px;height:300px;
+  color: #ffffff;
+}
+
+#yemianform{
+  position: relative;
+  left: 710px;
+  top: 200px;
+  background: rgba(255,255,255,0.2);width:400px;height:220px;
 }
 
 .game {

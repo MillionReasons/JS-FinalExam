@@ -12,6 +12,31 @@
  </style>
 
 
+
+    <div id="yemianform" class="container">  
+        <div class="form row">  
+            
+                <h3 id="h3" class="form-title">登陆账户</h3>
+                <div class="col-sm-9 col-md-9">  
+                    <div class="form-group">  
+                        <i class="fa fa-user fa-lg"></i>  
+                        
+                       <a id="yonghuming">用户名：</a> <div id="inputyonghu"><input type="text" name="username" id="username"></div>
+                    </div>  
+                    <a> </a>
+                    <div class="form-group">  
+                            <i class="fa fa-lock fa-lg"></i>  
+                          <a id="mima">密码：</a>  <div id="inputmima"><input  type="password" name="password" id="password"></div>
+                    </div>  
+                    <div class="form-group">  
+                    <input id="zhuceanniu" type="button"   value="注 册" onclick="zhuce();"/>
+                    <input id="denluanniu" type="button"  value="登 录" onclick="denlu();"/>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+
 <script>
 
     /*登录*/
@@ -78,10 +103,14 @@ if (typeof(sessionStorage) != "undefined") {
         zhuceyanzheng =1;
    }
 }
-if(zhuceyanzheng==0){
+
+if(username.length<3){
+    alert("用户名不能小于3位字符！");
+}
+else if(zhuceyanzheng==0){
        var pwdid=document.getElementById("password");
        var password =pwdid.value;
-       if(password.length<3){
+ if(password.length<3){
            alert("密码长度不能小于3位");
        }
        else{sessionStorage.setItem(username,password);
@@ -129,30 +158,8 @@ if(zhuceyanzheng==0){
 
 
 
-    <div id="yemianform" class="container">  
-        <div class="form row">  
-            
-                <h3 id="h3" class="form-title">登陆账户</h3>
-                <div class="col-sm-9 col-md-9">  
-                    <div class="form-group">  
-                        <i class="fa fa-user fa-lg"></i>  
-                        
-                       <a id="yonghuming">用户名：</a> <div id="inputyonghu"><input type="text" name="username" id="username"></div>
-                    </div>  
-                    <a> </a>
-                    <div class="form-group">  
-                            <i class="fa fa-lock fa-lg"></i>  
-                          <a id="mima">密码：</a>  <div id="inputmima"><input  type="password" name="password" id="password"></div>
-                    </div>  
-                    <div class="form-group">  
-                    <input id="zhuceanniu" type="button"   value="注 册" onclick="zhuce();"/>
-                    <input id="denluanniu" type="button"  value="登 录" onclick="denlu();"/>
-                    </div>
-                </div>
-        </div>
-    </div>
 
-    <script type="text/javascript" >
 
+   
 
 

@@ -511,7 +511,7 @@ function runGame(plans, Display) {
               startLevel(n);
           } else {
               //生命为0时直接从起始关开始
-              // document.getElementById("finish").innerHTML=1;
+              
               alert("游戏结束！");
           }
       }

@@ -48,10 +48,7 @@
 
       paiming1.innerHTML = keySession;
       paiming2.innerHTML = 0;
-
-      tr.appendChild(paiming1);
-      tr.appendChild(paiming2);    
-
+ 
       document.getElementById("table1").appendChild(tr);
 
       var top1 = localStorage.getItem(localStorage.key(0));
@@ -193,6 +190,12 @@
 
 
 
+//个人信息更新
+      tr.appendChild(paiming1);
+      tr.appendChild(paiming2);  
+
+
+
 
 
     }
@@ -209,7 +212,11 @@
 <table border="0" width= 200px id="table1">
   <tr>
     <th  align=center>当前账号ID</th>
-    <th align=center>当前分数</th>
+    <th  align=center>当前分数</th>
+  </tr>
+    <tr>
+    <td id="qwe" align=center></td>
+    <td id="qwer" align=center></td>
   </tr>
 </table>
 </div>

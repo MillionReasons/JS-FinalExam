@@ -1,5 +1,6 @@
-.background    { background: rgb(52, 166, 251);
+.background    { background:url(1234.jpg);
                  table-layout: fixed;
+                 
                  border-spacing: 0;   }
 .background td { padding: 0;          }
 .lava          { background: rgb(255, 100, 100); }
